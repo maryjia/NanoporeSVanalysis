@@ -18,18 +18,6 @@ pip install pandas
 Download the alignment.py and variant_caller.py files above, which contains all of the python code necessary for analysis. 
 
 Go to the terminal and change directories to enter the directory where you have saved these .py files.
-```rb
-conda activate np_conda_env
-
-python alignment.py \
-  --input_dir "/Users/maryjia/fastq_pass/barcode02" \
-  --sample_name MT2_repeat \
-  --output_root "/Volumes/NP_DATA2/Raw_data/10kb" \
-  --reference_fasta "/Users/maryjia/Downloads/sequence.fasta" \
-  --threads 16 \
-  --output_bam "/Volumes/NP_DATA2/Raw_data/10kb/MT2_repeat/custom_alignment.bam"
-
-```
 
 The next step is to activate your conda environment and run the alignment.py file to concatonate adn align your fastq.gz files to a supplied fasta reference file.
 
@@ -39,12 +27,12 @@ Below is how the code runs using the provided example data. Make sure you add yo
 conda activate np_conda_env
 
 python alignment.py \
-  --input_dir "/Your/fastq.gz/file/path/here" \
+  --input_dir "/Your/input/directory" \
   --sample_name YOUR_SAMPLE \
-  --output_root "/Your/desired/output/path/here" \
-  --reference_fasta "/Your/path/to/YOUR_REFERENCE.fasta" \
+  --output_root "/Volumes/NP_DATA2/Raw_data/10kb" \
+  --reference_fasta "/Users/maryjia/Downloads/sequence.fasta" \
   --threads 16 \
-  --output_bam "ouput.bam"
+  --output_bam "/Volumes/NP_DATA2/Raw_data/10kb/MT2_repeat/custom_alignment.bam"
 
 ```
 This will result in a consolidated single fastq.gz and alignment files needed to call the variant calling script.
