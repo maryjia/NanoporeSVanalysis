@@ -34,4 +34,4 @@ python alignment.py \
 
 ```
 
-# Running the deepmod2 pipeline
+# Running the methylation pipeline
